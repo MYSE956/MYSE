@@ -2,7 +2,6 @@
 <html lang="fr">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -17,10 +16,7 @@
     content="MYSE — Parfums, mode et identité. Inspirée par Maryse Véronique Kolony."
   >
 
-  <!-- =========================================
-       TYPOGRAPHIES
-  ========================================== -->
-
+  <!-- TYPOGRAPHIES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
@@ -30,243 +26,103 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   >
 
-  <!-- =========================================
-       CSS
-  ========================================== -->
-
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-
-
-  <!-- =========================================
-       STYLE DU LOGO
-       directement dans index.html
-  ========================================== -->
-
-  <style>
-
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .brand-logo {
-      display: block;
-      width: 150px;
-      height: auto;
-      object-fit: contain;
-    }
-
-    .hero-logo {
-      display: block;
-      width: min(320px, 70vw);
-      height: auto;
-      object-fit: contain;
-      margin: 0 auto 25px;
-    }
-
-    .signature-logo {
-      display: block;
-      width: 220px;
-      max-width: 70%;
-      height: auto;
-      object-fit: contain;
-      margin: 0 auto 25px;
-    }
-
-    .footer-logo-image {
-      display: block;
-      width: 170px;
-      max-width: 80%;
-      height: auto;
-      object-fit: contain;
-      margin-bottom: 20px;
-    }
-
-    @media (max-width: 768px) {
-
-      .brand-logo {
-        width: 110px;
-      }
-
-      .hero-logo {
-        width: 220px;
-      }
-
-      .signature-logo {
-        width: 170px;
-      }
-
-      .footer-logo-image {
-        width: 140px;
-      }
-
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
 
 
-<!-- =========================================
+<!-- =====================================================
      HEADER
-========================================= -->
+===================================================== -->
 
 <header class="header">
 
-  <!-- LOGO OFFICIEL MYSE -->
-
-  <a
-    href="#accueil"
-    class="brand"
-    aria-label="MYSE - Accueil"
-  >
-
+  <a href="#accueil" class="brand">
     <img
       src="images/myse-logo.png"
-      alt="Logo officiel MYSE"
+      alt="MYSE"
       class="brand-logo"
     >
-
   </a>
 
-
-  <!-- NAVIGATION -->
 
   <nav class="desktop-nav">
 
     <a href="#accueil">
-
       ACCUEIL
-
-      <small>
-        HOME
-      </small>
-
+      <small>HOME</small>
     </a>
-
 
     <a href="#parfum">
-
       PARFUMS
-
-      <small>
-        FRAGRANCES
-      </small>
-
+      <small>FRAGRANCES</small>
     </a>
-
 
     <a href="#collection">
-
       VÊTEMENTS
-
-      <small>
-        CLOTHING
-      </small>
-
+      <small>CLOTHING</small>
     </a>
-
 
     <a href="#histoire">
-
       NOTRE HISTOIRE
-
-      <small>
-        OUR STORY
-      </small>
-
+      <small>OUR STORY</small>
     </a>
 
-
     <a href="#contact">
-
       CONTACT
-
     </a>
 
   </nav>
 
 
-  <!-- ACTIONS HEADER -->
-
   <div class="header-actions">
 
-
     <div class="languages">
-
-      FR
-
-      <span>
-        |
-      </span>
-
-      EN
-
+      FR <span>|</span> EN
     </div>
 
-
     <button
-      class="icon-button"
-      aria-label="Recherche"
+      class="header-icon"
       type="button"
+      aria-label="Rechercher"
     >
       ⌕
     </button>
 
-
     <button
-      class="icon-button"
-      aria-label="Compte"
+      class="header-icon"
       type="button"
+      aria-label="Compte"
     >
       ♙
     </button>
 
-
     <button
-      class="icon-button"
-      aria-label="Panier"
+      class="header-icon"
       type="button"
+      aria-label="Panier"
     >
       ♢
     </button>
 
-
-    <a
-      href="#parfum"
-      class="preorder-button"
-    >
-
+    <a href="#parfum" class="preorder">
       PRÉCOMMANDER
-
-      <small>
-        PRE-ORDER
-      </small>
-
+      <small>PRE-ORDER</small>
     </a>
 
-
     <button
-      class="mobile-menu-button"
+      class="menu-button"
       id="mobileMenuButton"
-      aria-label="Ouvrir le menu"
-      aria-expanded="false"
       type="button"
+      aria-label="Menu"
     >
-
       ☰
-
     </button>
 
   </div>
@@ -274,706 +130,604 @@
 </header>
 
 
-
-<!-- =========================================
+<!-- =====================================================
      MENU MOBILE
-========================================= -->
+===================================================== -->
 
-<div
-  class="mobile-menu"
-  id="mobileMenu"
->
-
+<div class="mobile-menu" id="mobileMenu">
 
   <button
     class="close-menu"
     id="closeMenu"
-    aria-label="Fermer le menu"
     type="button"
   >
-
     ×
-
   </button>
 
-
-  <a href="#accueil">
-    Accueil / Home
-  </a>
-
-
-  <a href="#parfum">
-    Parfums / Fragrances
-  </a>
-
-
-  <a href="#collection">
-    Vêtements / Clothing
-  </a>
-
-
-  <a href="#histoire">
-    Notre histoire / Our Story
-  </a>
-
-
-  <a href="#contact">
-    Contact
-  </a>
-
+  <a href="#accueil">ACCUEIL / HOME</a>
+  <a href="#parfum">PARFUMS / FRAGRANCES</a>
+  <a href="#collection">VÊTEMENTS / CLOTHING</a>
+  <a href="#histoire">NOTRE HISTOIRE / OUR STORY</a>
+  <a href="#contact">CONTACT</a>
 
 </div>
-
 
 
 <main>
 
 
-<!-- =========================================
-     HERO
-========================================= -->
+<!-- =====================================================
+     HERO / NOTRE HISTOIRE
+===================================================== -->
 
-<section
-  class="hero"
-  id="accueil"
->
+<section class="hero" id="accueil">
 
+  <!-- COLONNE GAUCHE -->
 
-  <div class="hero-overlay"></div>
-
-
-  <!-- VALEURS GAUCHE -->
-
-  <div class="hero-left">
-
-
-    <p class="vertical-values">
-
-      BEAUTÉ
-
-      <br>
-
-      BEAUTY
-
-
-      <br><br>
-
-
-      ÉLÉGANCE
-
-      <br>
-
-      ELEGANCE
-
-
-      <br><br>
-
-
-      CONFIANCE
-
-      <br>
-
-      CONFIDENCE
-
-
-      <br><br>
-
-
-      INSPIRATION
-
-      <br>
-
-      INSPIRATION
-
-    </p>
-
-
-  </div>
-
-
-
-  <!-- CENTRE HERO -->
-
-  <div class="hero-center">
-
-
-    <p class="gold-kicker">
-
-      PARFUMS · MODE · IDENTITÉ
-
-    </p>
-
-
-    <!-- LOGO OFFICIEL -->
-
-    <img
-      src="images/myse-logo.png"
-      alt="MYSE"
-      class="hero-logo"
-    >
-
-
-    <div class="gold-line"></div>
-
-
-    <h1>
-
-      MYSE
-
-    </h1>
-
-
-    <h2>
-
-      L'ÉLÉGANCE QUI TE RESSEMBLE.
-
-    </h2>
-
-
-    <p class="hero-english">
-
-      ELEGANCE THAT REFLECTS YOU.
-
-    </p>
-
-
-    <p class="hero-description">
-
-      Une identité. Un style. Un monde.
-
-      <br>
-
-      One identity. One style. One world.
-
-    </p>
-
-
-
-    <div class="hero-buttons">
-
-
-      <a
-        href="#parfum"
-        class="button button-gold"
-      >
-
-        DÉCOUVRIR MYSE
-
-        <small>
-          DISCOVER MYSE
-        </small>
-
-      </a>
-
-
-      <a
-        href="#histoire"
-        class="button button-outline"
-      >
-
-        NOTRE HISTOIRE
-
-        <small>
-          OUR STORY
-        </small>
-
-      </a>
-
-
-    </div>
-
-
-  </div>
-
-
-
-  <!-- PRODUIT HERO -->
-
-  <div class="hero-product">
-
-
-    <img
-      src="images/myse-parfum.jpg"
-      alt="Parfum MYSE N°01"
-    >
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     INTRODUCTION
-========================================= -->
-
-<section class="manifesto">
-
-
-  <p class="section-kicker">
-
-    L'UNIVERS MYSE / THE MYSE WORLD
-
-  </p>
-
-
-  <h2>
-
-    UNE IDENTITÉ.
-
-    <br>
-
-    UN STYLE.
-
-    <br>
-
-    UN MONDE.
-
-  </h2>
-
-
-  <div class="manifesto-line"></div>
-
-
-  <p>
-
-    ONE IDENTITY. ONE STYLE. ONE WORLD.
-
-  </p>
-
-
-</section>
-
-
-
-<!-- =========================================
-     PARFUM MYSE N°01
-========================================= -->
-
-<section
-  class="perfume-section"
-  id="parfum"
->
-
-
-  <!-- IMAGE PARFUM -->
-
-  <div class="perfume-image">
-
-
-    <img
-      src="images/myse-parfum.jpg"
-      alt="MYSE N°01 Eau de Parfum"
-    >
-
-
-  </div>
-
-
-
-  <!-- DESCRIPTION -->
-
-  <div class="perfume-content">
-
-
-    <p class="section-kicker">
-
-      LE PARFUM / THE FRAGRANCE
-
-    </p>
-
-
-    <h2>
-
-      MYSE N°01
-
-    </h2>
-
-
-    <p class="product-type">
-
-      EAU DE PARFUM
-
-      <span>
-        •
-      </span>
-
-      UNISEXE / UNISEX
-
-    </p>
-
-
-    <div class="small-gold-line"></div>
-
-
-    <p>
-
-      Une fragrance boisée, ambrée et fraîche,
-      imaginée pour celles et ceux qui souhaitent
-      laisser une empreinte.
-
-    </p>
-
-
-    <p class="english-text">
-
-      A woody, amber and fresh fragrance created
-      for those who want to leave a mark.
-
-    </p>
-
-
-
-    <!-- NOTES OLFACTIVES -->
-
-    <div class="olfactive-grid">
-
-
-      <!-- NOTE 1 -->
-
-      <div class="note">
-
-
-        <span>
-          01
-        </span>
-
-
-        <h3>
-
-          NOTES DE TÊTE
-
-        </h3>
-
-
-        <small>
-
-          TOP NOTES
-
-        </small>
-
-
-        <p>
-
-          Bergamote
-
-          <br>
-
-          Poivre rose
-
-          <br>
-
-          Agrumes
-
-        </p>
-
-
-        <p class="english-text">
-
-          Bergamot
-
-          <br>
-
-          Pink Pepper
-
-          <br>
-
-          Citrus
-
-        </p>
-
-
-      </div>
-
-
-
-      <!-- NOTE 2 -->
-
-      <div class="note">
-
-
-        <span>
-          02
-        </span>
-
-
-        <h3>
-
-          NOTES DE CŒUR
-
-        </h3>
-
-
-        <small>
-
-          HEART NOTES
-
-        </small>
-
-
-        <p>
-
-          Iris
-
-          <br>
-
-          Jasmin
-
-          <br>
-
-          Bois doux
-
-        </p>
-
-
-        <p class="english-text">
-
-          Iris
-
-          <br>
-
-          Jasmine
-
-          <br>
-
-          Soft Woods
-
-        </p>
-
-
-      </div>
-
-
-
-      <!-- NOTE 3 -->
-
-      <div class="note">
-
-
-        <span>
-          03
-        </span>
-
-
-        <h3>
-
-          NOTES DE FOND
-
-        </h3>
-
-
-        <small>
-
-          BASE NOTES
-
-        </small>
-
-
-        <p>
-
-          Ambre
-
-          <br>
-
-          Musc
-
-          <br>
-
-          Bois de santal
-
-        </p>
-
-
-        <p class="english-text">
-
-          Amber
-
-          <br>
-
-          Musk
-
-          <br>
-
-          Sandalwood
-
-        </p>
-
-
-      </div>
-
-
-    </div>
-
-
-
-    <button
-      class="coming-soon-button"
-      type="button"
-    >
-
-      BIENTÔT DISPONIBLE
-
-      <small>
-
-        COMING SOON
-
-      </small>
-
-    </button>
-
-
-  </div>
-
-
-</section>
-
-
-
-<!-- =========================================
-     NOTRE HISTOIRE
-========================================= -->
-
-<section
-  class="story-section"
-  id="histoire"
->
-
-
-  <!-- PHOTO MARYSE -->
-
-  <div class="story-founder">
-
+  <div class="hero-photo">
 
     <img
       src="images/maryse.jpg"
       alt="Maryse Véronique Kolony"
     >
 
+    <div class="hero-values">
 
-    <div class="founder-caption">
+      <p>
+        BEAUTÉ<br>
+        ÉLÉGANCE<br>
+        CONFIANCE<br>
+        INSPIRATION
+      </p>
 
+      <div class="mini-line"></div>
 
-      <span>
-
-        INSPIRÉE PAR
-
-      </span>
-
-
-      <strong>
-
-        MARYSE VÉRONIQUE KOLONY
-
-      </strong>
-
-
-      <small>
-
-        INSPIRED BY MARYSE VÉRONIQUE KOLONY
-
-      </small>
-
+      <p>
+        BEAUTY<br>
+        ELEGANCE<br>
+        CONFIDENCE<br>
+        INSPIRATION
+      </p>
 
     </div>
 
+    <div class="maryse-signature">
+      Maryse<br>
+      Véronique<br>
+      Kolony ♡
+    </div>
 
   </div>
 
 
+  <!-- CENTRE -->
 
-  <!-- HISTOIRE -->
+  <div class="hero-story" id="histoire">
 
-  <div class="story-content">
-
-
-    <p class="section-kicker">
-
-      NOTRE HISTOIRE / OUR STORY
-
+    <p class="eyebrow">
+      NOTRE HISTOIRE
+      <span>OUR STORY</span>
     </p>
 
+    <div class="gold-small-line"></div>
+
+    <h1>
+      <em>Inspirée par</em>
+      <strong>MARYSE VÉRONIQUE KOLONY</strong>
+    </h1>
+
+    <p class="story-subtitle">
+      INSPIRED BY MARYSE VÉRONIQUE KOLONY
+    </p>
+
+    <p>
+      MYSE est née d'une inspiration personnelle :
+      Maryse Véronique Kolony. Son nom, son identité
+      et son histoire ont inspiré la création d'un univers
+      où l'élégance, le caractère et l'expression de soi
+      se rencontrent.
+    </p>
+
+    <div class="gold-small-line"></div>
+
+    <p>
+      MYSE was born from a personal inspiration:
+      Maryse Véronique Kolony. Her name, identity and
+      story inspired the creation of a world where
+      elegance, character and self-expression come together.
+    </p>
+
+    <a href="#vision" class="gold-button">
+      DÉCOUVRIR NOTRE HISTOIRE
+      <small>DISCOVER OUR STORY</small>
+      <span>→</span>
+    </a>
+
+  </div>
+
+
+  <!-- COLONNE DROITE -->
+
+  <div class="hero-identity">
+
+    <div>
+
+      <h2>
+        UNE<br>
+        IDENTITÉ.<br>
+        UN STYLE.<br>
+        UN MONDE.
+      </h2>
+
+      <div class="gold-small-line"></div>
+
+      <p>
+        ONE<br>
+        IDENTITY.<br>
+        ONE STYLE.<br>
+        ONE WORLD.
+      </p>
+
+    </div>
+
+
+    <div class="identity-logo">
+
+      <img
+        src="images/myse-logo.png"
+        alt="Logo MYSE"
+      >
+
+      <p>
+        L'ÉLÉGANCE QUI TE RESSEMBLE.
+      </p>
+
+      <small>
+        ELEGANCE THAT REFLECTS YOU.
+      </small>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     VISION / GALERIE
+===================================================== -->
+
+<section class="vision" id="vision">
+
+  <div class="vision-text">
 
     <h2>
-
-      Inspirée par
-
+      UNE VISION NÉE D'UNE
       <br>
-
-      <strong>
-
-        MARYSE VÉRONIQUE KOLONY
-
-      </strong>
-
+      HISTOIRE PERSONNELLE
     </h2>
 
+    <h3>
+      A VISION BORN FROM A PERSONAL STORY
+    </h3>
 
-    <div class="small-gold-line"></div>
-
-
-    <p>
-
-      MYSE est née d'une inspiration personnelle :
-      <strong>Maryse Véronique Kolony</strong>.
-
-      Plus qu'un nom, elle représente l'origine
-      d'une vision où l'élégance, l'identité
-      et l'expression de soi se rencontrent.
-
-    </p>
-
+    <div class="dark-line"></div>
 
     <p>
-
-      Entre parfumerie et mode, MYSE imagine
-      un univers contemporain où chaque création
-      devient une signature : un parfum qui laisse
-      une empreinte, un vêtement qui affirme une
-      présence, un style qui raconte qui vous êtes.
-
+      Entre parfumerie et mode, MYSE imagine un univers
+      contemporain où chaque création devient une signature :
+      un parfum qui laisse une empreinte, un vêtement qui
+      affirme une présence, un style qui raconte qui vous êtes,
+      sans avoir besoin de mots.
     </p>
-
 
     <p>
-
-      Nourrie par une histoire entre le Canada
-      et la République démocratique du Congo,
-      MYSE porte une vision internationale,
-      ouverte sur le monde.
-
-    </p>
-
-
-
-    <div class="story-separator"></div>
-
-
-
-    <p class="english-text">
-
-      MYSE was born from a personal inspiration:
-      <strong>Maryse Véronique Kolony</strong>.
-
-      More than a name, she represents the beginning
-      of a vision where elegance, identity and
-      self-expression come together.
-
-    </p>
-
-
-    <p class="english-text">
-
       At the intersection of fragrance and fashion,
       MYSE creates a contemporary world where every
-      creation becomes a signature.
+      creation becomes a signature: a fragrance that
+      leaves an impression, a garment that defines a
+      presence, a style that expresses who you are
+      without the need for words.
+    </p>
 
+    <div class="vision-signature">
+      Plus qu'une marque,
+      <br>
+      une histoire qui continue.
+    </div>
+
+    <p class="vision-ending">
+      More than a brand,
+      <br>
+      a story that continues.
+    </p>
+
+  </div>
+
+
+  <div class="editorial-card" id="parfum">
+
+    <img
+      src="images/myse-parfum.jpg"
+      alt="MYSE N°01 Eau de Parfum"
+    >
+
+    <div class="card-caption">
+      <span>MYSE N°01</span>
+      <small>EAU DE PARFUM · UNISEX</small>
+    </div>
+
+  </div>
+
+
+  <div class="editorial-card">
+
+    <img
+      src="images/mannequin.jpg"
+      alt="Univers mode MYSE"
+    >
+
+    <div class="card-caption">
+      <span>MYSE</span>
+      <small>IDENTITY</small>
+    </div>
+
+  </div>
+
+
+  <div class="editorial-card">
+
+    <img
+      src="images/myse-card.jpg"
+      alt="Packaging MYSE"
+    >
+
+    <div class="card-caption">
+      <span>MYSE</span>
+      <small>SIGNATURE</small>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     VALEURS
+===================================================== -->
+
+<section class="values">
+
+  <div class="value">
+    <span class="value-icon">◇</span>
+    <h3>AUTHENTICITÉ</h3>
+    <p>AUTHENTICITY</p>
+  </div>
+
+  <div class="value">
+    <span class="value-icon">♧</span>
+    <h3>ÉLÉGANCE</h3>
+    <p>ELEGANCE</p>
+  </div>
+
+  <div class="value">
+    <span class="value-icon">◎</span>
+    <h3>OUVERTURE</h3>
+    <p>OPENNESS</p>
+  </div>
+
+  <div class="value">
+    <span class="value-icon">♧</span>
+    <h3>IMPACT</h3>
+    <p>IMPACT</p>
+  </div>
+
+  <div class="value">
+    <span class="value-icon">∞</span>
+    <h3>INTEMPOREL</h3>
+    <p>TIMELESS</p>
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SIGNATURE / UNIVERS
+===================================================== -->
+
+<section class="brand-world" id="collection">
+
+  <div class="world-dark">
+
+    <div class="world-content">
+
+      <img
+        src="images/myse-logo.png"
+        alt="MYSE"
+        class="world-logo"
+      >
+
+      <p class="world-slogan">
+        L'ÉLÉGANCE QUI TE RESSEMBLE.
+        <br>
+        <span>ELEGANCE THAT REFLECTS YOU.</span>
+      </p>
+
+
+      <div class="world-categories">
+
+        <div>
+          <span>●</span>
+          <p>
+            PARFUMS
+            <small>FRAGRANCES</small>
+          </p>
+        </div>
+
+        <div>
+          <span>●</span>
+          <p>
+            VÊTEMENTS
+            <small>CLOTHING</small>
+          </p>
+        </div>
+
+        <div>
+          <span>●</span>
+          <p>
+            STYLE DE VIE
+            <small>LIFESTYLE</small>
+          </p>
+        </div>
+
+      </div>
+
+
+      <p class="world-location">
+        ◉ &nbsp; CANADA
+        &nbsp; → &nbsp;
+        RDC
+        &nbsp; → &nbsp;
+        LE MONDE
+      </p>
+
+      <p class="world-location">
+        &nbsp;&nbsp;&nbsp;&nbsp; CANADA
+        &nbsp; → &nbsp;
+        DRC
+        &nbsp; → &nbsp;
+        THE WORLD
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="world-image">
+
+    <div class="world-image-overlay"></div>
+
+  </div>
+
+
+  <div class="quote-panel">
+
+    <div class="quote-content">
+
+      <blockquote>
+        « Parce que l'élégance n'est pas
+        seulement ce que l'on porte.
+        <strong>
+          C'est ce que l'on dégage.
+        </strong> »
+      </blockquote>
+
+      <p>
+        Because elegance is not only what you wear.
+        <br>
+        It is what you embody.
+      </p>
+
+      <div class="quote-line"></div>
+
+      <span>
+        MARYSE VÉRONIQUE KOLONY
+      </span>
+
+    </div>
+
+
+    <div class="quote-watermark">
+      MY
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PARFUM - INFORMATIONS
+===================================================== -->
+
+<section class="product-details">
+
+  <div class="product-details-image">
+
+    <img
+      src="images/myse-parfum.jpg"
+      alt="Parfum MYSE N°01"
+    >
+
+  </div>
+
+
+  <div class="product-details-content">
+
+    <p class="eyebrow dark-eyebrow">
+      LE PARFUM / THE FRAGRANCE
+    </p>
+
+    <h2>
+      MYSE N°01
+    </h2>
+
+    <p class="product-type">
+      EAU DE PARFUM · UNISEXE / UNISEX
+    </p>
+
+    <div class="dark-line"></div>
+
+    <p>
+      Une fragrance boisée, ambrée et fraîche,
+      imaginée pour celles et ceux qui souhaitent
+      laisser une empreinte.
+    </p>
+
+    <p>
+      A woody, amber and fresh fragrance created
+      for those who want to leave a mark.
     </p>
 
 
+    <div class="notes">
 
-    <blockquote>
+      <div>
+        <span>01</span>
+        <h3>NOTES DE TÊTE</h3>
+        <small>TOP NOTES</small>
+        <p>
+          Bergamote · Poivre rose · Agrumes
+        </p>
+      </div>
 
-      « Parce que l'élégance n'est pas seulement
-      ce que
+      <div>
+        <span>02</span>
+        <h3>NOTES DE CŒUR</h3>
+        <small>HEART NOTES</small>
+        <p>
+          Iris · Jasmin · Bois doux
+        </p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <h3>NOTES DE FOND</h3>
+        <small>BASE NOTES</small>
+        <p>
+          Ambre · Musc · Bois de santal
+        </p>
+      </div>
+
+    </div>
+
+
+    <button class="coming-soon" type="button">
+      BIENTÔT DISPONIBLE
+      <small>COMING SOON</small>
+    </button>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contact">
+
+  <div class="footer-main">
+
+    <div class="footer-brand">
+
+      <img
+        src="images/myse-logo.png"
+        alt="MYSE"
+      >
+
+    </div>
+
+
+    <div class="footer-slogan">
+
+      <p>
+        L'ÉLÉGANCE QUI TE RESSEMBLE.
+      </p>
+
+      <small>
+        ELEGANCE THAT REFLECTS YOU.
+      </small>
+
+    </div>
+
+
+    <nav class="footer-nav">
+
+      <a href="#parfum">
+        PARFUMS
+      </a>
+
+      <span>|</span>
+
+      <a href="#collection">
+        VÊTEMENTS
+      </a>
+
+      <span>|</span>
+
+      <a href="#histoire">
+        NOTRE HISTOIRE
+      </a>
+
+      <span>|</span>
+
+      <a href="#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+
+    <div class="footer-countries">
+      CANADA 🇨🇦
+      &nbsp;&nbsp;
+      RDC 🇨🇩
+      &nbsp;&nbsp;
+      MONDE
+    </div>
+
+  </div>
+
+
+  <div class="socials">
+
+    <a href="#" aria-label="Instagram">◎</a>
+    <a href="#" aria-label="TikTok">♪</a>
+    <a href="#" aria-label="YouTube">▶</a>
+    <a href="#" aria-label="Pinterest">P</a>
+    <a href="#" aria-label="Facebook">f</a>
+
+  </div>
+
+
+  <div class="copyright">
+
+    © 2026 MYSE. Tous droits réservés.
+    &nbsp; | &nbsp;
+    All rights reserved.
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
