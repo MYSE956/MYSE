@@ -1,0 +1,1468 @@
+style.css
+/* =========================================
+   MYSE — OFFICIAL WEBSITE
+   Luxury / Fashion / Fragrance
+========================================= */
+
+:root {
+  --black: #070707;
+  --black-soft: #101010;
+  --black-light: #171717;
+  --cream: #f3ede2;
+  --cream-dark: #ded2bf;
+  --white: #ffffff;
+  --gold: #c6a15b;
+  --gold-light: #dfc27e;
+  --text-grey: #aaa49a;
+  --border: rgba(198, 161, 91, 0.28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: "Montserrat", Arial, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+body::selection {
+  background: var(--gold);
+  color: var(--black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92px;
+  padding: 0 5%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(7, 7, 7, 0.91);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(16px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-monogram {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 600;
+  border-right: 1px solid var(--gold);
+  padding-right: 15px;
+}
+
+.brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 8px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.desktop-nav a {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: .3s ease;
+}
+
+.desktop-nav a small {
+  display: block;
+  color: #777;
+  font-size: 7px;
+  margin-top: 2px;
+}
+
+.desktop-nav a:hover {
+  color: var(--gold);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.languages {
+  font-size: 10px;
+  letter-spacing: 1px;
+  margin-right: 8px;
+}
+
+.languages span {
+  color: var(--gold);
+  margin: 0 3px;
+}
+
+.icon-button {
+  color: white;
+  background: transparent;
+  border: 0;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.preorder-button {
+  background: var(--gold);
+  color: var(--black);
+  padding: 11px 17px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.preorder-button small {
+  display: block;
+  font-size: 6px;
+}
+
+.mobile-menu-button {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.mobile-menu {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+
+  background: #080808;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 28px;
+
+  transform: translateX(100%);
+  transition: transform .5s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+.mobile-menu a {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.close-menu {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  background: transparent;
+  color: white;
+  border: 0;
+
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+
+  display: grid;
+  grid-template-columns: .4fr 2fr 1fr;
+  align-items: center;
+
+  padding: 140px 6% 80px;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(198,161,91,.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #050505,
+      #0d0d0d 55%,
+      #16120d
+    );
+
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border: 1px solid rgba(198,161,91,.08);
+  border-radius: 50%;
+  right: -150px;
+  top: 120px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.4),
+      transparent 40%,
+      rgba(0,0,0,.1)
+    );
+}
+
+.hero-left,
+.hero-center,
+.hero-product {
+  position: relative;
+  z-index: 2;
+}
+
+.vertical-values {
+  color: #777;
+  font-size: 8px;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+.hero-center {
+  text-align: center;
+}
+
+.gold-kicker,
+.section-kicker {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.main-monogram {
+  margin: 20px auto 0;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--gold);
+  font-size: 55px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(75px, 10vw, 155px);
+  letter-spacing: 18px;
+  font-weight: 500;
+  line-height: .85;
+  margin: 12px 0 20px;
+}
+
+.gold-line {
+  width: 90px;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px auto;
+}
+
+.hero h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.hero-english {
+  color: #888;
+  letter-spacing: 3px;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.hero-description {
+  color: #b6b0a7;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.button {
+  min-width: 180px;
+  padding: 15px 25px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  transition: .35s ease;
+}
+
+.button small {
+  display: block;
+  font-size: 7px;
+  margin-top: 2px;
+}
+
+.button-gold {
+  background: var(--gold);
+  color: black;
+}
+
+.button-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-3px);
+}
+
+.button-outline {
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+.button-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.hero-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-product img {
+  max-height: 560px;
+  width: auto;
+  max-width: 100%;
+
+  filter:
+    drop-shadow(0 40px 40px rgba(0,0,0,.7))
+    drop-shadow(0 0 30px rgba(198,161,91,.15));
+
+  animation: perfumeFloat 5s ease-in-out infinite;
+}
+
+@keyframes perfumeFloat {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-13px);
+  }
+}
+
+
+/* =========================================
+   MANIFESTO
+========================================= */
+
+.manifesto {
+  min-height: 600px;
+  padding: 130px 20px;
+
+  background: var(--cream);
+  color: var(--black);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.manifesto h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(50px, 7vw, 95px);
+  line-height: .95;
+  letter-spacing: 4px;
+  margin: 25px 0;
+}
+
+.manifesto-line {
+  width: 1px;
+  height: 70px;
+  background: var(--gold);
+  margin: 20px 0;
+}
+
+.manifesto > p:last-child {
+  letter-spacing: 4px;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   PERFUME
+========================================= */
+
+.perfume-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 850px;
+  background: #0d0d0d;
+}
+
+.perfume-image {
+  background:
+    radial-gradient(
+      circle,
+      rgba(198,161,91,.16),
+      transparent 50%
+    ),
+    #090909;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px;
+}
+
+.perfume-image img {
+  max-width: 520px;
+  max-height: 680px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 35px 50px rgba(0,0,0,.8));
+}
+
+.perfume-content {
+  padding: 120px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.perfume-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(55px, 7vw, 95px);
+  font-weight: 500;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin: 18px 0;
+}
+
+.product-type {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+.product-type span {
+  padding: 0 10px;
+}
+
+.small-gold-line {
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 28px 0;
+}
+
+.perfume-content > p {
+  max-width: 570px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+}
+
+.english-text {
+  color: #888;
+}
+
+.olfactive-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+
+  margin-top: 45px;
+  padding-top: 35px;
+
+  border-top: 1px solid #292929;
+}
+
+.note > span {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+}
+
+.note h3 {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+
+.note small {
+  color: #666;
+  font-size: 7px;
+}
+
+.note p {
+  color: #bbb;
+  font-size: 11px;
+  margin-top: 13px;
+  line-height: 1.8;
+}
+
+.note .english-text {
+  color: #666;
+}
+
+.coming-soon-button {
+  align-self: flex-start;
+  margin-top: 40px;
+
+  padding: 16px 28px;
+
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
+.coming-soon-button small {
+  display: block;
+  font-size: 7px;
+  margin-top: 3px;
+}
+
+
+/* =========================================
+   OUR STORY
+========================================= */
+
+.story-section {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+
+  background: var(--cream);
+  color: var(--black);
+
+  min-height: 900px;
+}
+
+.story-founder {
+  position: relative;
+  min-height: 900px;
+  overflow: hidden;
+}
+
+.story-founder img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+
+  filter: saturate(.85) contrast(1.02);
+}
+
+.story-founder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.75),
+      transparent 50%
+    );
+}
+
+.founder-caption {
+  position: absolute;
+  z-index: 2;
+  left: 50px;
+  bottom: 50px;
+
+  color: white;
+}
+
+.founder-caption span {
+  display: block;
+  color: var(--gold-light);
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.founder-caption strong {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  letter-spacing: 2px;
+  margin: 5px 0;
+}
+
+.founder-caption small {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.story-content {
+  padding: 100px 11%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(45px, 5vw, 70px);
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.story-content h2 strong {
+  color: #6d5124;
+  font-weight: 500;
+}
+
+.story-content > p {
+  max-width: 650px;
+  margin-bottom: 18px;
+  color: #514d46;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+}
+
+.story-content .english-text {
+  color: #898177;
+}
+
+.story-separator {
+  width: 100%;
+  height: 1px;
+  background: #cfc5b5;
+  margin: 25px 0;
+}
+
+.story-content blockquote {
+  margin-top: 25px;
+  border-left: 2px solid var(--gold);
+  padding-left: 25px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.story-content blockquote small {
+  display: block;
+  color: #8a8176;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   EDITORIAL GALLERY
+========================================= */
+
+.editorial-gallery {
+  background: #090909;
+  padding: 120px 6%;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.gallery-intro {
+  padding: 50px 25px 50px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-intro h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+  line-height: 1.05;
+  font-weight: 400;
+  margin: 25px 0;
+}
+
+.gallery-intro > p:last-child {
+  color: #777;
+  letter-spacing: 2px;
+  font-size: 9px;
+}
+
+.gallery-card {
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform .8s ease,
+    filter .8s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(.75);
+}
+
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.75),
+      transparent 50%
+    );
+}
+
+.gallery-label {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 25px;
+
+  color: white;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.values {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+
+  background: #0b0b0b;
+}
+
+.value {
+  padding: 65px 20px;
+  text-align: center;
+
+  border-right: 1px solid #222;
+
+  transition: .4s ease;
+}
+
+.value:last-child {
+  border-right: 0;
+}
+
+.value:hover {
+  background: #12100c;
+}
+
+.value > span {
+  display: block;
+  color: var(--gold);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.value h3 {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.value p {
+  color: #666;
+  font-size: 8px;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+
+/* =========================================
+   COLLECTION
+========================================= */
+
+.collection-section {
+  background: var(--cream);
+  color: var(--black);
+
+  padding: 130px 6%;
+}
+
+.collection-heading {
+  max-width: 700px;
+  margin-bottom: 60px;
+}
+
+.collection-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px,8vw,105px);
+  font-weight: 500;
+  line-height: .9;
+  margin: 15px 0 25px;
+}
+
+.collection-heading > p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+}
+
+.collection-heading .english-text {
+  color: #81796e;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.collection-card {
+  background: #e9e1d4;
+  overflow: hidden;
+  transition: .4s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-8px);
+}
+
+.collection-placeholder {
+  height: 430px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #292929,
+      #090909 65%
+    );
+
+  color: var(--gold);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+.collection-info {
+  padding: 25px;
+}
+
+.collection-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.collection-info p {
+  color: #777064;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.signature-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 650px;
+}
+
+.signature-dark {
+  background:
+    radial-gradient(
+      circle at center,
+      #19140d,
+      #050505 70%
+    );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 70px;
+}
+
+.signature-monogram {
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 70px;
+  font-style: italic;
+}
+
+.signature-dark h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 85px;
+  letter-spacing: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.signature-dark > p {
+  color: #aaa;
+  letter-spacing: 3px;
+  font-size: 9px;
+}
+
+.locations {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 45px;
+}
+
+.locations span {
+  color: #555;
+  margin: 0 12px;
+}
+
+.signature-quote {
+  background: var(--cream);
+  color: var(--black);
+
+  padding: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signature-quote blockquote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(35px,4vw,58px);
+  line-height: 1.05;
+  font-style: italic;
+}
+
+.signature-quote blockquote strong {
+  display: block;
+  color: #765927;
+  font-weight: 500;
+}
+
+.signature-quote > p {
+  color: #81796d;
+  margin-top: 30px;
+}
+
+.quote-author {
+  color: #765927;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 30px;
+}
+
+
+/* =========================================
+   NEWSLETTER
+========================================= */
+
+.newsletter {
+  background: #0c0c0c;
+
+  text-align: center;
+
+  padding: 120px 20px;
+}
+
+.newsletter h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(50px,7vw,90px);
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.newsletter > p {
+  color: #aaa;
+}
+
+.newsletter-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+
+  display: flex;
+}
+
+.newsletter-form input {
+  flex: 1;
+
+  padding: 17px 20px;
+
+  border: 1px solid #333;
+  border-right: 0;
+
+  background: transparent;
+  color: white;
+
+  outline: none;
+}
+
+.newsletter-form input:focus {
+  border-color: var(--gold);
+}
+
+.newsletter-form button {
+  padding: 0 28px;
+
+  background: var(--gold);
+  color: black;
+
+  border: 1px solid var(--gold);
+
+  font-size: 9px;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  background: #050505;
+  padding: 80px 6% 25px;
+}
+
+.footer-brand {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #222;
+}
+
+.footer-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 55px;
+  letter-spacing: 12px;
+}
+
+.footer-brand p {
+  color: #777;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 60px;
+
+  padding: 55px 0;
+}
+
+.footer-links h4 {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.footer-links a,
+.footer-links p {
+  display: block;
+
+  color: #777;
+
+  font-size: 11px;
+
+  margin-bottom: 10px;
+
+  transition: .3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid #222;
+
+  color: #555;
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.hero-center {
+  animation: revealHero 1.2s ease both;
+}
+
+@keyframes revealHero {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-left {
+    display: none;
+  }
+
+  .editorial-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-intro {
+    min-height: 450px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .header {
+    height: 72px;
+    padding: 0 20px;
+  }
+
+  .brand-monogram {
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 22px;
+    letter-spacing: 5px;
+  }
+
+  .languages,
+  .icon-button,
+  .preorder-button {
+    display: none;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 950px;
+
+    grid-template-columns: 1fr;
+
+    padding:
+      120px 20px
+      60px;
+  }
+
+  .hero-center {
+    align-self: start;
+  }
+
+  .hero h1 {
+    font-size: 72px;
+    letter-spacing: 10px;
+  }
+
+  .main-monogram {
+    font-size: 40px;
+  }
+
+  .hero h2 {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-product {
+    margin-top: 50px;
+  }
+
+  .hero-product img {
+    max-height: 380px;
+  }
+
+
+  /* MANIFESTO */
+
+  .manifesto {
+    min-height: 550px;
+    padding: 90px 20px;
+  }
+
+  .manifesto h2 {
+    font-size: 52px;
+  }
+
+
+  /* PERFUME */
+
+  .perfume-section {
+    grid-template-columns: 1fr;
+  }
+
+  .perfume-image {
+    min-height: 550px;
+    padding: 40px;
+  }
+
+  .perfume-image img {
+    max-height: 450px;
+  }
+
+  .perfume-content {
+    padding: 80px 25px;
+  }
+
+  .perfume-content h2 {
+    font-size: 58px;
+  }
+
+  .olfactive-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* STORY */
+
+  .story-section {
+    grid-template-columns: 1fr;
+  }
+
+  .story-founder {
+    min-height: 650px;
+  }
+
+  .founder-caption {
+    left: 25px;
+    bottom: 30px;
+  }
+
+  .story-content {
+    padding: 80px 25px;
+  }
+
+  .story-content h2 {
+    font-size: 45px;
+  }
+
+
+  /* GALLERY */
+
+  .editorial-gallery {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+  }
+
+  .gallery-intro {
+    min-height: auto;
+    padding: 0 0 35px;
+  }
+
+  .gallery-card {
+    min-height: 500px;
+  }
+
+
+  /* VALUES */
+
+  .values {
+    grid-template-columns: 1fr;
+  }
+
+  .value {
+    border-right: 0;
+    border-bottom: 1px solid #222;
+  }
+
+
+  /* COLLECTION */
+
+  .collection-section {
+    padding: 90px 20px;
+  }
+
+  .collection-heading h2 {
+    font-size: 65px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* SIGNATURE */
+
+  .signature-section {
+    grid-template-columns: 1fr;
+  }
+
+  .signature-dark {
+    min-height: 600px;
+    padding: 40px 20px;
+  }
+
+  .signature-dark h2 {
+    font-size: 65px;
+    letter-spacing: 9px;
+  }
+
+  .signature-quote {
+    min-height: 600px;
+    padding: 60px 30px;
+  }
+
+
+  /* NEWSLETTER */
+
+  .newsletter {
+    padding: 90px 20px;
+  }
+
+  .newsletter h2 {
+    font-size: 50px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .newsletter-form input {
+    border-right: 1px solid #333;
+  }
+
+  .newsletter-form button {
+    padding: 17px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    padding: 70px 25px 25px;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+}
